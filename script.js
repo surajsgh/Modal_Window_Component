@@ -27,3 +27,12 @@ for (let i = 0; i < btnShowModal.length; i++) {
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// As soon as we press any keyboard key, javascript generates an object which is passed down as an arguement to the function as shown below. 'keydown' is used for such operations.
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  }
+});

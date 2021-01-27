@@ -20,7 +20,7 @@ const closeModal = () => {
 };
 
 // Whenever we use querySelectorAll, We should use for loop to get our operation done.
-// Don't use openModal(), otherwise the function would get executed before the event operation is performed. Same goes for closeModal.
+// Don't use 'openModal()', otherwise the function would get executed before the event operation is performed. Same goes for closeModal.
 for (let i = 0; i < btnShowModal.length; i++) {
   btnShowModal[i].addEventListener('click', openModal);
 }
